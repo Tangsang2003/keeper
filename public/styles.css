@@ -58,6 +58,18 @@ footer p {
   word-wrap: break-word;
 }
 
+.note button {
+  position: relative;
+  float: right;
+  border: none;
+  width: 60px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  color: #f5ba13;
+}
+
 form {
   position: relative;
   width: 480px;
