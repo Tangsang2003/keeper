@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function CreateArea(props) {
-  const [note, setNote] = useState({ title: "", content: "" });
+  const [note, setNote] = useState({ title: "", content: ""});
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -18,11 +18,12 @@ function CreateArea(props) {
     event.preventDefault(); //Prevent From Refresh
 
     if (note.title.trim() || note.content.trim()) {
+        const newNote = {...note, id: Date.now()}
       props.setNoteList((prevValue) => {
-        return [...prevValue, note];
+        return [...prevValue, newNote];
       });
 
-      setNote({ title: "", content: "" });
+      setNote({ title: "", content: ""});
     }
   }
   return (

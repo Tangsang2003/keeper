@@ -10,9 +10,9 @@ function App() {
         <div>
             <Header />
             {/* <Note /> */}
-            <CreateArea noteList={notes} setNoteList={setNotes}  />
-            {notes.map((note, index) => {
-                return <Note key={index} id={index} title={note.title} content={note.content} />
+            <CreateArea setNoteList={setNotes}  />
+            {notes.map((note) => {
+                return <Note setNoteList={setNotes} key={note.id} id={note.id} title={note.title} content={note.content} />
             })}
             <Footer />
         </div>
